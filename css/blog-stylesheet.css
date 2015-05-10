@@ -1,0 +1,76 @@
+body {
+  margin: 0px;
+  background: #fff;
+  font-family: Georgia;
+}
+
+a:link {
+  color: #1D3D45;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2F9299;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+nav {
+  background: #B5FFDA;
+  height: 60px;
+  white-space:nowrap;
+  width: 101%;
+}
+
+nav a {
+  position: relative;
+  top: 25%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 0%;
+}
+
+main {
+  margin: 5%;
+}
+
+#links-blog-index {
+  height: 400px;
+  white-space: nowrap;
+  background: #B2655B;
+  margin-top: 150px;
+}
+
+#links-blog-index h2 {
+  color: transparent;
+  position: absolute;
+}
+
+#social, #current-project, #contact {
+  position: absolute;
+  top: 10%;
+}
+
+#current-project {
+  left: 40%;
+}
+
+#contact {
+  right: 5%;
+}
+
+#social {
+  left: 5%;
+}
+
+#links-blog-index {
+  position: relative;
+}
+
+#footer-blog-index {
+  position: static;
+}
