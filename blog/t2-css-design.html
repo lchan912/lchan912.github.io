@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<head>
+  <title>Your page title here</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-stylesheet.css">
+</head>
+
+<nav>   
+  <a id="logo" href="#"><img src="#" alt="logo"></a>
+  <a href="#">About Me</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Blog</a>
+  <a href="#">Links</a>
+  <a id="last-link" href="#">Contact Me</a>
+</nav>
+
+<main>
+  <h1>Tips for manipulating whitespace</h1>
+  <h2>Margins vs Paddings vs Borders</h2>
+  <h4>May 10th, 2015</h4>
+
+  <section>
+    <p>
+      When styling a website using CSS, one of the more common frustrations that beginners come across is positioning and managing whitespace between elements of a site. For example, how does one reduce the gap between the image and its caption. Enter CSS box model. 
+    </p>
+    <p>
+      CSS box model defines the layers of whitespace that surrounds the actual content. 
+    <p><img src="../img/box-model.png"></p>
+      Padding  is the space immediately around the content and the border goes around the padding and content. The border is often leveraged to visually box or create a "border" around an element. The border and padding can be adjust to be as thick or thin as suitable. Lastly, the margin is the area outside of the border and is useful for creating space between one element and the next. All in all, the combination of the three properties contribute to the whitespace surrounding an element. Next we'll look at how to manipulate these properties.
+    </p>
+    <p>In the image below, you see that the texts are really close to edges.</p>
+    <p><img src="../img/example1.png"></p>
+    <p>To increase the space between the texts and the edges, you input the highlighted code in the image below.</p>
+    <p><img src="../img/example2.png"></p>
+    <p>Looks like the padding around the text made the overall boxes bigger and now the boxes are touching. To create space between the boxes, you add margin.</p>
+    <p><img src="../img/example3.png"></p>
+    <p>What if you want to make a border around the box about cats?</p>
+    <p><img src="../img/example4.png"></p>
+    <p>With the three properties, you can move elements of a webpage around and create more visually appealing websites.</p>
+  </section>
+</main>
+
+<section id="links-blog-index">
+  <h2>Links</h2>
+  <div id="social">
+    <h3>Latest Tweet</h3>
+    <p><a href="#">tweet tweet</a></p>
+    <h3>Social</h3>
+    <p>
+      <a href="#">FB</a>
+      <a href="#">Twitter</a>
+      <a href="#">GitHub</a>
+      <a href=#>LinkedIn</a>
+      <a href="#">Google+</a>
+    </p>
+  </div>
+  <div id="current-project">
+    <h3>Current Project</h3>
+    <p>Project Details</p>
+  </div>
+  <div id="contact">
+    <h3>Telephone</h3>
+    <p>123 456 7890</p>
+    <h3>Email</h3>
+    <p>lchan912@gmail.com</p>
+  </div>
+</section>
+
+<footer id="footer-blog-index">
+  <p>&copy; Made by LoChan. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
