@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arrays and Hashes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-stylesheet.css">
+</head>
+<body>
+  <nav>   
+    <a id="logo" href="#"><img src="#" alt="logo"></a>
+    <a href="#">About Me</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Blog</a>
+    <a href="#">Links</a>
+    <a id="last-link" href="#">Contact Me</a>
+  </nav>
+
+  <main>
+    <h1>Arrays vs Hashes</h1>
+    <h2>When to use what?</h2>
+    <h4>May 16, 2015</h4>
+
+    <section>
+      <p>
+        Arrays and hashes are two data structures that allow you to collect, view, and manipulate pieces of data in meaningful ways. For example, say you want to organize your contacts by their names and phone numbers. Both arrays and hashes can help you achieve that, except one would be more suitable than the other in this case. 
+      </p>
+      <p>
+        Let's store the made-up contact list below so that we can easily retrieve the phone number of any given contact.
+      </p>
+      <table>
+        <tr>
+          <td>Jane Smith</td>
+          <td>234-533-5344</td>
+        </tr>
+        <tr>
+          <td>Lorri Ale</td>
+          <td>340-343-4449</td>
+        </tr>
+        <tr>
+        <td>Amber Joe</td>
+          <td>320-348-3822</td>
+        </tr>
+        <tr>
+          <td>Rocky Lee</td>
+          <td>284-239-3888</td>
+        </tr>
+        <tr>
+          <td>Joseph Young</td>
+          <td>394-939-9999</td>
+        </tr>
+        <tr>
+          <td>Alpha Dare</td>
+          <td>390-982-3332</td>
+        </tr>
+        <tr>
+          <td>Corey Tan</td>
+          <td>299-333-5555</td>
+        </tr>
+        <tr>
+          <td>Angie Jones</td>
+          <td>302-494-8842</td>
+        </tr>
+      </table>
+      <p>
+        If we were to use arrays to store the data and later retrieve a specific phone number, we execute the following ruby code:
+      </p>
+      <pre><code>
+        contact_list = []
+          contact_list.push(["Jane Smith", "234-533-5344"])
+          contact_list.push(["Lorri Ale", "340-343-4449"])
+          contact_list.push(["Amber Joe", "320-348-3822"])
+          contact_list.push(["Rocky Lee", "284-239-3888"])
+          contact_list.push(["Joseph Young", "394-939-9999"])
+          contact_list.push(["Alpha Dare", "390-982-3332"])
+          contact_list.push(["Corey Tan", "299-333-5555"])
+          contact_list.push(["Angie Jones", "302-494-8842"])
+      </code></pre>
+      <p>
+        We first created an empty array called "contact_list" and then populated it with contacts and their phone numbers wrapped in smaller arrays. Once the code runs, we can retrieve, say, Amber Joe's number with the following ruby code:
+      </p>
+      <pre><code>
+        contact_list.each {|name, phone|
+          puts phone if name == "Amber Joe"} # => 320-348-3822
+      </code></pre>
+      <p>
+        The code has to loop through "contact_list" one name at a time until it finds Amber Joe and prints her phone number. Imagine if you were a social butterfly and had a contact list of 10,000 names. ruby would potentially have to loop through 10,000 contacts before finding the contact you want. Another more efficient way to manage your contacts is through hashes.
+      </p>
+      <p>
+        First populate your hashtable with the following ruby code:
+      </p>
+      <pre><code>
+        contact_list = {}
+          contact_list["Jane Smith"] = "234-533-5344"
+          contact_list["Lorri Ale"] = "340-343-4449"
+          contact_list["Amber Joe"] = "320-348-3822"
+          contact_list["Rocky Lee"] = "284-239-3888"
+          contact_list["Joseph Young"] = "394-939-9999"
+          contact_list["Alpha Dare"] = "390-982-3332"
+          contact_list["Corey Tan"] = "299-333-5555"
+          contact_list["Angie Jones"] = "302-494-8842"
+      </code></pre>
+      <p>
+        We created a hash called "contact_list" and populated the hash with key-value pairs. In this case, the keys are the contacts' names, which are each paired with the value of their phone number. In order to, once again, retrieve Amber Joe's number, we execute the following ruby code:
+      </p>
+      <pre><code>
+        contact_list["Amber Joe"] # => 320-348-3822
+      </code></pre>
+      <p>
+        Notice that in this case, we are not cycling through the hash to identify a match to the name "Amber Joe". Instead, the hash has indexed each phone number by a contact's name. Thereby allowing you to simply provide a name (i.e., the key or index value) and the hash point to the corresponding phone number (i.e., the value). This concept is called key-value pairs.
+      </p>
+      <p>
+        Overall hashes are more efficient and effective for use cases where objects need to be associated with proprieties or values, like the English vocabulary and their definitions. Arrays are helpful when being able to iterate through data is important and when storing different types of data in a data set.  
+      </p>
+    </section>
+  </main>
+
+  <section id="links-blog-index">
+    <h2>Links</h2>
+    <div id="social">
+      <h3>Latest Tweet</h3>
+      <p><a href="#">tweet tweet</a></p>
+      <h3>Social</h3>
+      <p>
+        <a href="#">FB</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+        <a href=#>LinkedIn</a>
+        <a href="#">Google+</a>
+      </p>
+    </div>
+    <div id="current-project">
+      <h3>Current Project</h3>
+      <p>Project Details</p>
+    </div>
+    <div id="contact">
+      <h3>Telephone</h3>
+      <p>123 456 7890</p>
+      <h3>Email</h3>
+      <p>lchan912@gmail.com</p>
+    </div>
+  </section>
+
+  <footer id="footer-blog-index">
+    <p>&copy; Made by LoChan. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
