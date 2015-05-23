@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Enumerable Methods</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-stylesheet.css">
+</head>
+<body>
+<nav>   
+  <a id="logo" href="#"><img src="#" alt="logo"></a>
+  <a href="#">About Me</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Blog</a>
+  <a href="#">Links</a>
+  <a id="last-link" href="#">Contact Me</a>
+</nav>
+
+<main>
+  <h1>Enumerable Method: Group_by</h1>
+  <h2>Group_by 101</h2>
+  <h4>May 23, 2015</h4>
+
+  <section>
+    <p>
+      Ruby provides a simple method for grouping collection classes, such as arrays and
+      ranges. Group_by is an enumerable method that groups elements together based off of a code block. The output of the group_by method is a hash, where the key is the evaulated result of the code block and the value is the corresponding element from the collection class. <br/>
+      Take a look at the examples below:
+    </p>
+    <p>
+      We have been tasked by the local library to help organize their books and media. Our first assignment is to create sections of children's book based off of the first letter of the title.
+      <pre><code>
+
+      books = ["Where the Wild Things Are", "The Very Hungry Caterpillar", "Goodnight Moon", "Charlotte's Web", "The Giving Tree", "The Cat in the Hat"]
+
+      group_by_first_letter = books.group_by {|book| b[0]}
+
+      #=> {"W"=>["Where the Wild Things Are"], "T"=>["The Very Hungry Caterpillar", "The Giving Tree", "The Cat in the Hat"], "G"=>["Goodnight Moon"], "C"=>["Charlotte's Web"]}
+
+      </code></pre>
+      The librarian later changed her mind and thought that this way of categorizing books was pretty useless. 
+    </p>
+    <p>
+      Instead, we've been asked to categorize the books by the length of the book titles.We're not sure that this way of grouping books is any more helpful but you decided to give it a shot.
+
+      <pre><code>
+
+      books = ["Where the Wild Things Are", "The Very Hungry Caterpillar", "Goodnight Moon", "Charlotte's Web", "The Giving Tree", "The Cat in the Hat"]
+
+      group_by_title_length = books.group_by {|book| book.length}
+
+      #=> {25=>["Where the Wild Things Are"], 27=>["The Very Hungry Caterpillar"], 14=>["Goodnight Moon"], 15=>["Charlotte's Web", "The Giving Tree"], 18=>["The Cat in the Hat"]}
+
+      </code></pre>
+    </p>
+    <p>
+    We hear the librarian might be a little crazy but this last assignment from her does make a bit of sense. She would like to us group the non-fiction books by their subjects, as indicated in the titles of the books. So here we go:
+
+    <pre><code>
+
+    books = ["Snakes: Amazing Pictures and Fun Facts", "The Bravest Dog Ever", "National Geographic Readers: Shark", "Snakes: 101", "National Geographic Readers: Snakes", "A Lonely Dog on Christmas"]
+
+    group_by_string = books.group_by do |book|
+    case book
+      when book = /Snake/
+        "Snakes"
+      when book = /Dog/
+        "Dogs"
+      else
+        "Unknown"
+      end
+    end
+
+    </code></pre>
+    We iterated through the array of books and used a case method to match the books to regular expressions. A regular expression is a pattern that can be used to test and replace strings. More on that in another blog. 
+    </p>
+    <p>
+
+    In combination with other methods, group_by can be very powerful in organizing objects. The next time you are faced with data that needs to be consolidated in some understandable form, consider the group_by method.
+
+    </p>
+
+  </section>
+</main>
+
+<section id="links-blog-index">
+  <h2>Links</h2>
+  <div id="social">
+    <h3>Latest Tweet</h3>
+    <p><a href="#">tweet tweet</a></p>
+    <h3>Social</h3>
+    <p>
+      <a href="#">FB</a>
+      <a href="#">Twitter</a>
+      <a href="#">GitHub</a>
+      <a href=#>LinkedIn</a>
+      <a href="#">Google+</a>
+    </p>
+  </div>
+  <div id="current-project">
+    <h3>Current Project</h3>
+    <p>Project Details</p>
+  </div>
+  <div id="contact">
+    <h3>Telephone</h3>
+    <p>123 456 7890</p>
+    <h3>Email</h3>
+    <p>lchan912@gmail.com</p>
+  </div>
+</section>
+
+<footer id="footer-blog-index">
+  <p>&copy; Made by LoChan. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
