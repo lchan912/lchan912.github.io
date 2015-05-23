@@ -36,7 +36,8 @@
 
       group_by_first_letter = books.group_by {|book| b[0]}
 
-      #=> {"W"=>["Where the Wild Things Are"], "T"=>["The Very Hungry Caterpillar", "The Giving Tree", "The Cat in the Hat"], "G"=>["Goodnight Moon"], "C"=>["Charlotte's Web"]}
+      #=> {"W"=>["Where the Wild Things Are"], "T"=>["The Very Hungry Caterpillar", 
+      "The Giving Tree", "The Cat in the Hat"], "G"=>["Goodnight Moon"], "C"=>["Charlotte's Web"]}
 
       </code></pre>
       The librarian later changed her mind and thought that this way of categorizing books was pretty useless. 
@@ -46,11 +47,13 @@
 
       <pre><code>
 
-      books = ["Where the Wild Things Are", "The Very Hungry Caterpillar", "Goodnight Moon", "Charlotte's Web", "The Giving Tree", "The Cat in the Hat"]
+      books = ["Where the Wild Things Are", "The Very Hungry Caterpillar", "Goodnight
+       Moon", "Charlotte's Web", "The Giving Tree", "The Cat in the Hat"]
 
       group_by_title_length = books.group_by {|book| book.length}
 
-      #=> {25=>["Where the Wild Things Are"], 27=>["The Very Hungry Caterpillar"], 14=>["Goodnight Moon"], 15=>["Charlotte's Web", "The Giving Tree"], 18=>["The Cat in the Hat"]}
+      #=> {25=>["Where the Wild Things Are"], 27=>["The Very Hungry Caterpillar"],
+       14=>["Goodnight Moon"], 15=>["Charlotte's Web", "The Giving Tree"], 18=>["The Cat in the Hat"]}
 
       </code></pre>
     </p>
@@ -59,7 +62,9 @@
 
     <pre><code>
 
-    books = ["Snakes: Amazing Pictures and Fun Facts", "The Bravest Dog Ever", "National Geographic Readers: Shark", "Snakes: 101", "National Geographic Readers: Snakes", "A Lonely Dog on Christmas"]
+    books = ["Snakes: Amazing Pictures and Fun Facts", "The Bravest Dog Ever", "National 
+    Geographic Readers: Shark", "Snakes: 101", "National Geographic Readers: Snakes", 
+    "A Lonely Dog on Christmas"]
 
     group_by_string = books.group_by do |book|
     case book
