@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Ruby Classes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-stylesheet.css">
+</head>
+<body>
+  <nav>   
+    <a id="logo" href="#"><img src="#" alt="logo"></a>
+    <a href="#">About Me</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Blog</a>
+    <a href="#">Links</a>
+    <a id="last-link" href="#">Contact Me</a>
+  </nav>
+
+  <main>
+    <h1>Ruby Classes</h1>
+    <h2>Classing up the Real World with Ruby</h2>
+    <h4>May 31, 2014</h4>
+
+    <section>
+      <p>
+        When we talk about classes in ruby, we are not talking about your favorite course in school. We are talking about how ruby is designed to help you mimic the real world through the use of templates and blueprints (i.e., classes). Ruby classes serve as the springboard where specific instances or manifestation of objects are born. 
+      </p>
+      <p>
+      Let's take an example. Say the local vet clinic has asked you to develop a back-end program to keep track of their many clients (your dog being one of them). Well, you want this program to be efficient and effective. One of the first thing you may think about as you write your pseudocode is how to design and organize your code into the various methods you'll need to write up client profiles, track upcoming appointments, maintain health records, access owner contact information, and other business requirements.
+      </p>
+      <p>
+        One way to organize the code is to categorize the methods by real world objects such as animals, health records, owners, and appointments. For each category, you create a ruby class that maintains methods and attributes having to do with that specific real world object, like animals.
+        <pre><code>
+
+        class Animal
+
+          def print_species (species)
+            p species
+          end
+
+          def print_breed (breed)
+            p breed
+
+          def print_name (name)
+            p name
+          end
+
+          def print_age (age)
+            p age
+          end
+
+          def print_gender (gender)
+            p gender
+          end
+
+        end
+
+        </code></pre>
+        Each of the methods defined for the class Animal are called instance methods. Now if the clinic needed to register a husky into the system, you don't have to build methods from scratch to complete the registration. Instead, you can leverage the existing class Animal by building an instance (i.e., manifestation) of it and thereby have access to its methods.
+
+        <pre><code>
+
+        new_client = Animal.new
+
+        new_client.breed ('husky') #=> 'husky'
+        new_client.name ('Xena') #=> 'Xena'
+
+        </code></pre>
+      </p>
+      <p>
+        In addition to defining instance methods, you can also define instance variables in classes. As opposed to local variable, where the scope is limited to the context in which the variable was defined in, such as inside a particular method within an instance of a class, an instance variable is accessible by all methods within an instance of a class. 
+        In practical terms for our clinic example, we can define the instance variable @name so that it can then be used in multiple methods.
+
+        <pre><code>
+
+        class Animal
+          def set_name (name)
+            @name = name
+          end
+
+          def print_name
+            p @name
+          end
+
+          def print_receipt
+            puts "You look fabulous and healthy, #{@name}! Here's what your owe: $10.00"
+          end
+        end
+
+          #calling the methods
+
+            new_client = Animal.new
+
+            new_client.set_name('Xena') #=> 'Xena'
+            new_client.print_name #=> 'Xena'
+            new_client.print_receipt #=> "You look fabulous and healthy, Xena! Here's what your owe: $10.00"
+
+        </code></pre>
+        Note that instance variables are identifiable by the '@' in front of the variable name. If we tried to use a local variable instead for the example above, we'll get an undefined local variable or method error.
+
+        <pre><code>
+
+        class Animal
+          def set_name (name)
+            name = name
+          end
+
+          def print_name
+            p name
+          end
+
+          def print_receipt
+            puts "You look fabulous and healthy, #{name}! Here's what your owe: $10.00"
+          end
+        end
+
+          #calling the methods
+
+            new_client = Animal.new
+
+            new_client.set_name('Xena') #=> 'Xena'
+            new_client.print_name #=> undefined local variable or method `name' 
+            new_client.print_receipt #=> undefined local variable or method `name' 
+
+        </code></pre>
+      </p>
+
+    </section>
+  </main>
+
+  <section id="links-blog-index">
+    <h2>Links</h2>
+    <div id="social">
+      <h3>Latest Tweet</h3>
+      <p><a href="#">tweet tweet</a></p>
+      <h3>Social</h3>
+      <p>
+        <a href="#">FB</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+        <a href=#>LinkedIn</a>
+        <a href="#">Google+</a>
+      </p>
+    </div>
+    <div id="current-project">
+      <h3>Current Project</h3>
+      <p>Project Details</p>
+    </div>
+    <div id="contact">
+      <h3>Telephone</h3>
+      <p>123 456 7890</p>
+      <h3>Email</h3>
+      <p>lchan912@gmail.com</p>
+    </div>
+  </section>
+
+  <footer id="footer-blog-index">
+    <p>&copy; Made by LoChan. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
