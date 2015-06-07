@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>OOP Concepts</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-stylesheet.css">
+</head>
+<body>
+<nav>   
+  <a id="logo" href="#"><img src="#" alt="logo"></a>
+  <a href="#">About Me</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Blog</a>
+  <a href="#">Links</a>
+  <a id="last-link" href="#">Contact Me</a>
+</nav>
+
+<main>
+  <h1>"Closures" Explained</h1>
+  <h2>Blocks, Procs, and Lambdas</h2>
+  <h4>June 7th, 2015</h4>
+
+  <section>
+    <p>
+      Have you ever felt that you deserved some sort of closure after an important relationship ended rather abruptly? I certainly have. Good thing, ruby took care of that by providing more closure tactics than I've actually ever encountered. In the world of computer science, "closure" is another way of saying a block of code that can be passed into methods like Array#each and Hash#map.
+    </p>
+    <p>
+      We'll be diving into three specific types of "closure" and explaining what they are and how they are used. First is block, which is probably the most familiar to you. Block are contained in either <code>{}</code> or <code>do..end </code> statements. But what if you want to reuse a block? How do you do it without retyping the entire block of code? 
+    </p>
+    <p>
+     Introducing procs and lambdas, both of which allow you to set a block equal to a variable. That way you can reuse the block at any point in the code. Well, then what's the difference between procs and lambdas, you ask? 
+    </p>
+    <p>
+      Both procs and blocks are limited in that you cannot use the explicit <code>return</code> statement within the closures. Else you will be returning to whatever method (e.g., Array#each) that called the blocks. Which means, you can only rely on the implicit return (i.e., last line of code) and return a single value. Lambdas, on the other-hand, allow the use of the explicit <code>return</code> and thereby gives you the option to return multiple values.
+
+      <pre><code>
+      #Block example
+      girlfriends = ['Amy', 'Kim', 'Joyce', 'Playstation']
+
+      girlfriends.map do |g| 
+          puts "#{g}, left me for no good reason." 
+          #return "boo" #=> this would result in an "unexpected return" error
+        end      
+      
+      #=> [nil, nil, nil, nil]   #The return value of 'puts' is nil
+      </code></pre>
+
+      <pre><code>
+      #proc example
+      girlfriends = ['Amy', 'Kim', 'Joyce', 'Playstation']
+      reason = Proc.new do |g| 
+          puts "#{g}, left me for no good reason." 
+          #return "boo" #=> this would result in an "unexpected return" error
+        end
+
+      girlfriends.map(&reason)
+      #=> [nil, nil, nil, nil]   #The return value of 'puts' is nil
+      </code></pre>
+
+      <pre><code>
+      #lambda example
+      girlfriends = ['Amy', 'Kim', 'Joyce', 'Playstation']
+      reason = lambda do |g| 
+          puts "#{g}, left me for no good reason." 
+          return "boo"
+        end
+
+      p girlfriends.map(&reason)
+      #=> ["boo", "boo", "boo", "boo"]
+      </code></pre>
+    </p>
+
+  </section>
+</main>
+
+<section id="links-blog-index">
+  <h2>Links</h2>
+  <div id="social">
+    <h3>Latest Tweet</h3>
+    <p><a href="#">tweet tweet</a></p>
+    <h3>Social</h3>
+    <p>
+      <a href="#">FB</a>
+      <a href="#">Twitter</a>
+      <a href="#">GitHub</a>
+      <a href=#>LinkedIn</a>
+      <a href="#">Google+</a>
+    </p>
+  </div>
+  <div id="current-project">
+    <h3>Current Project</h3>
+    <p>Project Details</p>
+  </div>
+  <div id="contact">
+    <h3>Telephone</h3>
+    <p>123 456 7890</p>
+    <h3>Email</h3>
+    <p>lchan912@gmail.com</p>
+  </div>
+</section>
+
+<footer id="footer-blog-index">
+  <p>&copy; Made by LoChan. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
