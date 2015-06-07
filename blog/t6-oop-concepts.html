@@ -33,7 +33,7 @@
      Introducing procs and lambdas, both of which allow you to set a block equal to a variable. That way you can reuse the block at any point in the code. Well, then what's the difference between procs and lambdas, you ask? 
     </p>
     <p>
-      Both procs and blocks are limited in that you cannot use the explicit <code>return</code> statement within the closures. Else you will be returning to whatever method (e.g., Array#each) that called the blocks. Which means, you can only rely on the implicit return (i.e., last line of code) and return a single value. Lambdas, on the other-hand, allow the use of the explicit <code>return</code> and thereby gives you the option to return multiple values.
+      Both procs and blocks are limited in that you cannot use the explicit <code>return</code> statement within the closures. Else you will be returning from whatever method (e.g., Array#each) that called the blocks. Which means, you can only rely on the implicit return (i.e., last line of code) and return a single value. Lambdas, on the other-hand, allow the use of the explicit <code>return</code> and thereby gives you the option to return multiple values.
 
       <pre><code>
       #Block example
