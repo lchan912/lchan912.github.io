@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Beginning Days with JS</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-stylesheet.css">
+</head>
+<body>
+<nav>   
+  <a id="logo" href="#"><img src="#" alt="logo"></a>
+  <a href="#">About Me</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Blog</a>
+  <a href="#">Links</a>
+  <a id="last-link" href="#">Contact Me</a>
+</nav>
+
+<main>
+  <h1>JS vs Ruby</h1>
+  <h2>Fundamental Difference in Ruby hashs and JS objects</h2>
+  <h4>June 13th, 2015</h4>
+
+  <section>
+    <p>
+      My first realization of the difference in Ruby hash and JS object was when I was tasked to create a grocery list. As you can imagine, a grocery list usually contains items and quantities of items needed. In Ruby this can be done easily through hashes, as soon in the code below:
+
+      <pre><code>
+      grocery_list = {milk: 1, apple: 6, butter: 2, flour: 1}
+      #=> {:milk=>1, :apple=>6, :butter=>2, :flour=>1}
+      </code></pre>
+    </p>
+    <p>
+      However, in JS instead of creating a hash, I created an object groceryList with names and value properties associated with items and quantities of items. Using object literal notation, the syntax for creating the JS object is similar to that of Ruby's. 
+      <pre><code>
+      var groceryList = {
+        milk: 1,
+        apple: 6,
+        butter: 2,
+        flour: 1
+      }
+      </code></pre>
+    </p>
+    <p>
+      Once I've created the grocery list (either as a hash in Ruby or as an object in JS), I can retrieve the key-value pairs or name-value properties using the following code.
+      <pre><code>
+      #Ruby
+      grocery_list[:apple]
+      #=> 6
+      </code></pre>
+      <pre><code>
+      //JavaScript
+      return groceryList.apple;
+      //=> 6
+      </code></pre>
+    </p>
+    <p>
+    Additionally, if I need to remove or add an item to the grocery list, I execute the following code:
+
+    <pre><code>
+    #Ruby
+    #Remove item
+    grocery_list.delete(:milk)
+
+    #Add item
+    grocery_list[:cereal] = 2
+    
+    #View hash
+    grocery_list
+    #=> {:apple=>6, :butter=>2, :flour=>1, :cereal=>2}
+
+    </code></pre>
+
+    <pre><code>
+    //JavaScript
+    //Remove item
+    delete groceryList.milk;
+
+    //Add item
+    groceryList[cereal] = 2
+
+    //View object
+    return groceryList;
+    // { apple: 6,
+        butter: 2,
+        flour: 1,
+        cereal: 2}
+    </code></pre>
+    </p>
+
+  </section>
+</main>
+
+<section id="links-blog-index">
+  <h2>Links</h2>
+  <div id="social">
+    <h3>Latest Tweet</h3>
+    <p><a href="#">tweet tweet</a></p>
+    <h3>Social</h3>
+    <p>
+      <a href="#">FB</a>
+      <a href="#">Twitter</a>
+      <a href="#">GitHub</a>
+      <a href=#>LinkedIn</a>
+      <a href="#">Google+</a>
+    </p>
+  </div>
+  <div id="current-project">
+    <h3>Current Project</h3>
+    <p>Project Details</p>
+  </div>
+  <div id="contact">
+    <h3>Telephone</h3>
+    <p>123 456 7890</p>
+    <h3>Email</h3>
+    <p>lchan912@gmail.com</p>
+  </div>
+</section>
+
+<footer id="footer-blog-index">
+  <p>&copy; Made by LoChan. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
