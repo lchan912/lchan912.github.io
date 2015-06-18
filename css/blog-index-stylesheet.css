@@ -1,0 +1,152 @@
+
+body {
+  margin: 0px;
+  background: #fff;
+  font-family: Georgia;
+  
+}
+
+#container {
+  min-width: 1000px;
+}
+
+
+header {
+  visibility: hidden;
+  position: absolute;
+}
+
+a.nav:link {
+  color: #fff;
+}
+
+a.nav:visited {
+  color: #D3C6C6;
+}
+
+
+a:link {
+  color: #810000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #5E5757;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+nav {
+  background: #A11515;
+  height: 70px;
+  white-space:nowrap;
+  width: 101%;
+}
+
+nav a {
+  color: #fff;
+  position: relative;
+  font-size: 13px;
+  top: 35%;
+  left: 25%;
+  padding-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 0%;
+}
+
+#latestPosting {
+  margin-left: 12em;
+  margin-right: 12em;
+  margin-bottom: 4em;
+  margin-top: 4em;
+  padding: 1em;
+  line-height: 2em;
+  border: 2px solid;
+}
+
+#blogC, #blogT {
+  position: relative;
+  border-top: solid;
+  width: 355px;
+}
+
+#blogC {
+  
+  left: 10%;
+  float: left;
+}
+
+#blogT {
+  right: 10%;
+  float: right;
+
+}
+
+#blogC article, #blogT article {
+  text-align: left;
+}
+
+#blogC h2, #blogT h2 {
+  margin-bottom: 45px;
+}
+
+#links {
+  height: 350px;
+  white-space: nowrap;
+  background: #998E8E;
+  position: relative;
+  top: 300px;
+  width: 101%;
+  clear: both;
+}
+
+
+#links h2 {
+  visibility: hidden;
+  position: absolute;
+}
+
+#social, #current-project, #contact {
+  width: 15%;
+  height: 200px;
+  margin-top: 30px;
+}
+
+#social, #current-project{
+  float: left;
+}
+
+#social {
+  margin-left: 5%;
+}
+
+#current-project{
+  margin-left: 25%;
+}
+
+#contact {
+  margin-left: 80%;
+  padding-top: 30px;
+}
+
+#social p a {
+  margin-left: 10px;
+  margin-top: 30px;
+  border: double;
+}
+
+#social p a:visited {
+  color: #fff;
+}
+
+
+footer {
+  position: relative;
+  top: 230px;
+  margin-left: 1%;
+  text-align: left;
+}
