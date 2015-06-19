@@ -1,10 +1,11 @@
-
 body {
   margin: 0px;
   background: #fff;
-  font-family: Georgia;
+  font-family: garamond;
+  font-size: 1.2em;
   
 }
+
 
 #container {
   min-width: 1000px;
@@ -16,13 +17,6 @@ header {
   position: absolute;
 }
 
-a.nav:link {
-  color: #fff;
-}
-
-a.nav:visited {
-  color: #D3C6C6;
-}
 
 
 a:link {
@@ -31,7 +25,7 @@ a:link {
 }
 
 a:visited {
-  color: #5E5757;
+  color: 5E5757;
   text-decoration: none;
 }
 
@@ -49,14 +43,16 @@ nav {
 nav a {
   color: #fff;
   position: relative;
-  font-size: 13px;
+  font-size: 1em;
   top: 35%;
   left: 25%;
   padding-top: 5%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 0%;
+  color: #fff;
 }
+
 
 #latestPosting {
   margin-left: 12em;
@@ -95,7 +91,7 @@ nav a {
 }
 
 #links {
-  height: 350px;
+  height: 300px;
   white-space: nowrap;
   background: #998E8E;
   position: relative;
@@ -133,14 +129,13 @@ nav a {
   padding-top: 30px;
 }
 
-#social p a {
-  margin-left: 10px;
-  margin-top: 30px;
-  border: double;
-}
-
-#social p a:visited {
+#container div a {
+  font-size: 17px;
+  padding: 1em;
+  display: inline-block;
+  border: 2px double;
   color: #fff;
+  margin-top: .5em;
 }
 
 

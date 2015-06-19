@@ -1,8 +1,8 @@
 
 body {
-  margin: 0px;
   background: #fff;
-  font-family: Georgia;
+  font-family: garamond;
+  font-size: 1.2em;
   
 }
 
@@ -18,7 +18,7 @@ header {
 
 #banner {
   background: #A11515;
-  height: 630px;
+  height: 550px;
   color: #540000;
   position: relative;
   top: -30px;
@@ -38,20 +38,13 @@ div {
 }
 
 #container div a {
-  font-size: 17px;
+  font-size: 1em;
   padding: 1em;
   margin: 1em;
   display: inline-block;
   margin-top: 170px;
   border: 2px solid white;
-}
-
-a.nav:link {
   color: #fff;
-}
-
-a.nav:visited {
-  color: #D3C6C6;
 }
 
 
@@ -77,9 +70,8 @@ nav {
 }
 
 nav a {
-  color: #fff;
   position: relative;
-  font-size: 13px;
+  font-size: .8em;;
   top: 35%;
   left: 25%;
   padding-top: 5%;
@@ -88,12 +80,16 @@ nav a {
   padding-bottom: 0%;
 }
 
+nav a:visited {
+  color: #fff;
+}
+
 #briefBackground {
   text-align: center;
   margin-left: 12em;
   margin-right: 12em;
   margin-bottom: 4em;
-  margin-top: 4em;
+  margin-top: 2.8em;
   line-height: 2em;
   border-bottom: solid;
 }
@@ -130,13 +126,13 @@ nav a {
 #project3 {
   position: absolute;
   left: 320px;
-  top: 362px;
+  top: 375px;
   border-top: solid;
 }
 
 #project4 {
   position: absolute;
-  top: 365px;
+  top: 377px;
 }
 
 #blogC, #blogT {
@@ -209,9 +205,6 @@ nav a {
   margin-left: 2px;
   margin-top: 2px;
   border: double;
-}
-
-#social p a:visited {
   color: #fff;
 }
 
