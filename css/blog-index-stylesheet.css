@@ -25,7 +25,7 @@ a:link {
 }
 
 a:visited {
-  color: 5E5757;
+  color: #5E5757;
   text-decoration: none;
 }
 
@@ -41,7 +41,6 @@ nav {
 }
 
 nav a {
-  color: #fff;
   position: relative;
   font-size: 1em;
   top: 35%;
@@ -50,6 +49,10 @@ nav a {
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 0%;
+  color: #fff;
+}
+
+nav a:visited {
   color: #fff;
 }
 
@@ -141,7 +144,7 @@ nav a {
 
 footer {
   position: relative;
-  top: 230px;
+  top: 240px;
   margin-left: 1%;
   text-align: left;
 }
